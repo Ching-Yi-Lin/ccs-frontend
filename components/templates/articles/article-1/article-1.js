@@ -3,12 +3,13 @@ import Image from "next/image";
 import getConfig from "next/config";
 import Link from "next/link";
 import { Tag } from "@/elements";
+import ReactMarkdown from "react-markdown";
 
-const getHTML = (content) => {
-  return {
-    __html: content,
-  };
-};
+// const getHTML = (content) => {
+//   return {
+//     __html: content,
+//   };
+// };
 
 export default function Article1({ content }) {
   if (!content) return <></>;
@@ -68,10 +69,15 @@ export default function Article1({ content }) {
               alt=""
             />
           </div>
-          <div
+          <ReactMarkdown
+className="text-primary-20 sm:ml-6 lg:ml-12 mb-20 lg:max-w-2xl lg:pr-4 leading-7 line-break"
+children={item.attributes.content.replace(/\n/gi, "&nbsp; \n")}
+/>
+
+          {/* <div
             className="max-w-2xl mx-auto"
             dangerouslySetInnerHTML={getHTML(item.attributes.content)}
-          ></div>
+          ></div> */}
           <div className="max-w-2xl mx-auto">
             {/* TODO: Implement Tag functionality */}
             {item.tags && (
