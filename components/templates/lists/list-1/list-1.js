@@ -50,7 +50,7 @@ export default function List1({ content }) {
                   )}
                   <h2>{item.attributes.title}</h2>
                   <p className="mb-12">{item.attributes.blurb}</p>
-                  {item.attributes.buttonLinks &&
+                  {/* {item.attributes.buttonLinks &&
                     item.attributes.buttonLinks.map((button) => {
                       return (
                         <ButtonLink
@@ -58,7 +58,7 @@ export default function List1({ content }) {
                           attributes={button}
                         ></ButtonLink>
                       );
-                    })}
+                    })} */}
                 </div>
               </div>
             ))}

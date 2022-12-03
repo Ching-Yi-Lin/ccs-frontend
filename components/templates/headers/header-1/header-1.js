@@ -22,7 +22,7 @@ export default function Header1({ content }) {
 
   return (
     <header id="header-1" className="template">
-      <section className="p-4 border-b border-gray-200 dark:border-gray-700">
+      <section className="bg-gray-800 p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-screen-xl mx-auto">
           <nav className="flex flex-wrap items-center">
             <Link href="/">
@@ -39,7 +39,7 @@ export default function Header1({ content }) {
                     alt=""
                   />
                 </span>
-                <span className="ml-3 text-xl font-bold text-black uppercase dark:text-white">
+                <span className="ml-3 text-xl font-bold text-white uppercase dark:text-white">
                   {global.name}
                 </span>
               </a>
@@ -62,7 +62,7 @@ export default function Header1({ content }) {
                       }
                     >
                       <Link href={menuItem.attributes.url}>
-                        <a className="flex justify-center w-full p-3 text-gray-600 transition duration-200 ease-in-out rounded-md dark:text-gray-300 hover:text-gray-900 hover:bg-gray-100 dark:hover:text-gray-800 md:w-auto">
+                        <a className="flex justify-center w-full p-3 text-white transition duration-200 ease-in-out rounded-md dark:text-gray-300 hover:text-gray-900 hover:bg-gray-100 dark:hover:text-gray-800 md:w-auto">
                           {menuItem.attributes.label}
                         </a>
                       </Link>

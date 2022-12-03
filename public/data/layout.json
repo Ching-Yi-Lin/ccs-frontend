@@ -13,7 +13,7 @@
         "slug": "footer",
         "template": { "slug": "footer-1" },
         "collections": {
-          "primary-menu-items": {},
+          "primary-menu-items": {"slug": "primary-menu-items"},
           "social-links": { }
         }
       }

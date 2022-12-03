@@ -3,6 +3,7 @@ import { Preheading, SocialLink, Field, ContextualLink, Button } from "@/element
 export default function Form1({ content }) {
   if (!content) return <></>;
   let { attributes, collections } = content;
+  
   if (!collections) {
     throw new Error(`No collections attribute provided in sections.json for template`);
   }

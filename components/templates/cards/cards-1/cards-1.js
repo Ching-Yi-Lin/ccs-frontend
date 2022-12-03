@@ -14,8 +14,8 @@ export default function Cards1({ content }) {
   }
 
   return (
-    <section id="cards-1" className="template">
-      <div className="max-w-screen-xl mx-auto">
+    <section id="cards-1" className="template bg-green-50">
+      <div className="max-w-screen-xl mx-auto py-10">
         <div className="grid grid-cols-1 gap-x-6 gap-y-16 lg:grid-cols-3">
           {items &&
             items.map((item, i) => (
@@ -23,13 +23,19 @@ export default function Cards1({ content }) {
                 <Preheading attributes={item.attributes.preheading}></Preheading>
                 <h3 className="mb-4">{item.attributes.title}</h3>
                 <p className="mb-10">{item.attributes.blurb}</p>
-                {item.attributes.buttonLinks &&
+                {/* {item.attributes.buttonLinks &&
                   item.attributes.buttonLinks.map((button) => {
                     return <ButtonLink key={button.type} attributes={button}></ButtonLink>;
-                  })}
+                  })} */}
               </div>
             ))}
         </div>
+        <div className="flex justify-center mt-10">
+        <ButtonLink
+                    key={"secondary"}
+                    attributes={{type:"secondary",label:"Our Classes",url:"/services"}}
+                  ></ButtonLink>
+                  </div>
       </div>
     </section>
   );

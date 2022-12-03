@@ -10,7 +10,7 @@ export default function Cover1({ content }) {
   return (
     <section id="cover-1" className="p-0 template">
       <div className="mx-auto lg:flex lg:items-center lg:min-h-screen max-w-screen-2xl">
-        <div className="items-center grid grid-cols-1 gap-x-28 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-28 lg:grid-cols-2">
           <div className="px-0 lg:pr-4 lg:order-last">
             <Image
               src={`${publicRuntimeConfig.BACKEND_URL || ""}${
@@ -23,10 +23,9 @@ export default function Cover1({ content }) {
               alt={attributes.title}
             />
           </div>
-          <div className="px-4 pt-10 pb-20 lg:py-40">
-            <Preheading attributes={attributes.preheading}></Preheading>
-            <h1>{attributes.title}</h1>
-            <p className="mb-12 text-lg">{attributes.blurb}</p>
+          <div className="bg-black px-4 pt-10 pb-20 lg:py-40">
+            <h1 className="text-white">{attributes.title}</h1>
+            <p className="mb-12 text-lg text-white ">{attributes.blurb}</p>
             {attributes.buttonLinks &&
               attributes.buttonLinks.map((button) => {
                 return (
