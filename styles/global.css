@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-block px-5 py-3 text-center transition-all duration-200 ease-in-out border-2 rounded-lg;
+  @apply inline-block px-5 py-3 text-center transition-all duration-200 ease-in-out border-2 rounded-lg font-semibold;
 }
 
 .btn-primary {

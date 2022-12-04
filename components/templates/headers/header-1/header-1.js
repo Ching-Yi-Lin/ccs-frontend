@@ -22,7 +22,7 @@ export default function Header1({ content }) {
 
   return (
     <header id="header-1" className="template">
-      <section className="bg-gray-800 p-4 border-b border-gray-200 dark:border-gray-700">
+      <section className="bg-gray-800 p-4 border-b border-gray-500 dark:border-gray-700">
         <div className="max-w-screen-xl mx-auto">
           <nav className="flex flex-wrap items-center">
             <Link href="/">

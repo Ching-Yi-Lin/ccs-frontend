@@ -23,49 +23,46 @@ export default function ProfileCards1({ content }) {
   }
 
   return (
-    <section id="profile-cards-1" className="template">
-      <div className="max-w-screen-xl mx-auto">
-        <div
-          className={`grid grid-cols-1 gap-x-6 gap-y-16 lg:grid-cols-${cols}`}
-        >
-          {items &&
-            items.slice(0, limit).map((item, i) => (
-              <div key={i}>
+    <section id="profile-cards-1" className="template flex items-stretch p-0">
+      <div className="w-1/3 self-stretch bg-[url('/images/bg-1.png')] bg-cover bg-center bg-no-repeat">
+      <div className="h-96"></div>
+      <div className="h-96"></div>
+    </div>
+      <div className="w-2/3 py-16 flex justify-center bg-[url('/images/deco-bg.png')] bg-cover bg-center bg-no-repeat">
+        {items &&
+          items.slice(0, limit).map((item, i) => (
+            <div className="flex flex-col w-64 items-center justify-center" key={i}>
+              <Link href={`/authors/${item.attributes.slug}`}>
+                <a>
+                  <div className="relative h-32 w-32 transition-opacity rounded-full hover:opacity-80">
+                    <Image
+                      className="rounded-full"
+                      src={`${publicRuntimeConfig.BACKEND_URL || ""}${
+                        item.attributes?.profileImage?.data.attributes.url
+                      }`}
+                      layout="fill"
+                      objectFit="cover"
+                      alt={item.attributes.fullName}
+                    />
+                  </div>
+                </a>
+              </Link>
+              <div className="p-8 text-center">
+                <span className={`preheading blank left`}>
+                  {item.attributes.position}
+                </span>
+                <Preheading attributes={item.attributes}></Preheading>
                 <Link href={`/authors/${item.attributes.slug}`}>
-                  <a>
-                    <div className="relative w-full h-56 transition-opacity rounded-b-none hover:opacity-80">
-                      <Image
-                        className="rounded-b-none"
-                        src={`${publicRuntimeConfig.BACKEND_URL || ""}${
-                          item.attributes?.profileImage?.data.attributes.url
-                        }`}
-                        layout="fill"
-                        objectFit="cover"
-                        alt={item.attributes.fullName}
-                      />
-                    </div>
+                  <a className="no-underline">
+                    <h3 className="mb-4 hover:text-gray-700 dark:hover:text-gray-200">
+                      {item.attributes.fullName}
+                    </h3>
                   </a>
                 </Link>
-                <div className="p-8 border border-t-0 border-gray-200 rounded-b-lg dark:border-gray-700">
-                  <span className={`preheading blank left`}>
-                    {item.attributes.position}
-                  </span>
-                  <Preheading attributes={item.attributes}></Preheading>
-                  <Link href={`/authors/${item.attributes.slug}`}>
-                    <a className="no-underline">
-                      <h3 className="mb-4 hover:text-gray-700 dark:hover:text-gray-200">
-                        {item.attributes.fullName}
-                      </h3>
-                    </a>
-                  </Link>
-                  <p>{item.attributes.excerpt}</p>
-                  <Link href={`/authors/${item.attributes.slug}`}>
-                    <a>Read More</a>
-                  </Link>
-                </div>
+                <p>{item.attributes.excerpt}</p>
               </div>
-            ))}
-        </div>
+            </div>
+          ))}
       </div>
     </section>
   );

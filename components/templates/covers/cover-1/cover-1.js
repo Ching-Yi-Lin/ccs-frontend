@@ -9,7 +9,7 @@ export default function Cover1({ content }) {
 
   return (
     <section id="cover-1" className="p-0 template">
-      <div className="mx-auto lg:flex lg:items-center lg:min-h-screen max-w-screen-2xl">
+      <div className="mx-auto lg:flex items-end max-w-screen-2xl">
         <div className="grid grid-cols-1 gap-x-28 lg:grid-cols-2">
           <div className="px-0 lg:pr-4 lg:order-last">
             <Image

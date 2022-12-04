@@ -20,16 +20,14 @@ const Page = (props) => {
         footerContent={props.footerContent}
       >
         <Cover2 content={props.aboutLandingContent} />
-        <div className="flex justify-center py-20 bg-green-50 relative">
-          <div className="fixed w-full">
-          <div className="h-20 bg-black">
+        <div className="flex justify-center py-20 bg-green-50">
           <Image
             src={"/images/CCS-hand-writing-2.png"}
             priority="true"
             width={666}
             height={483}
             alt={"christchurch calligraphy studio"}
-          /></div></div>
+          />
         </div>
         <ProfileCards1 content={props.teamContent} />
       </Layout>

@@ -10,7 +10,7 @@ export default function Cover3({ content }) {
   return (
     <section id="cover-3" className="p-0 template">
       <div className="grid grid-cols-1 lg:items-center lg:min-h-screen lg:grid-cols-2">
-        <div className="relative py-64 lg:h-full lg:order-last">
+        <div className="relative py-64 lg:h-full lg:order-last mt-10 mr-5">
           <Image 
           className="rounded-none" 
           src={`${publicRuntimeConfig.BACKEND_URL || ""}${attributes?.image?.data.attributes.url}`} 

@@ -7,7 +7,7 @@
         "main-landing": { "slug": "main-landing" },
         "features-list": {
           "slug": "features-list",
-          "collections": { "features": {} }
+          "collections": { "service-items": {} }
         },
         "benefits-list": {
           "slug": "benefits-list",
