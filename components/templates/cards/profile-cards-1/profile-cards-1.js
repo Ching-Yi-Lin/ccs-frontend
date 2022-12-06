@@ -46,7 +46,6 @@ export default function ProfileCards1({ content }) {
                   alt={item.attributes.fullName}
                 />
               </div>
-
               <div className="p-8 text-center">
                 <span className={`preheading blank left`}>
                   {item.attributes.position}
