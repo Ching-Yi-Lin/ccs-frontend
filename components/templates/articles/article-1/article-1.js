@@ -5,12 +5,6 @@ import Link from "next/link";
 import { Tag } from "@/elements";
 import ReactMarkdown from "react-markdown";
 
-// const getHTML = (content) => {
-//   return {
-//     __html: content,
-//   };
-// };
-
 export default function Article1({ content }) {
   if (!content) return <></>;
   let { item } = { ...content };

@@ -11,7 +11,7 @@ export default function Cover2({ content }) {
     <section id="cover-2" className="p-0 template">
       <div className="mx-auto lg:flex max-w-screen-2xl">
         <div className="items-center grid grid-cols-1 gap-x-28 lg:grid-cols-2">
-          <div className="bg-green-800 p-4 lg:order-last">
+          <div className="bg-black p-4 lg:order-last">
             <Image
               src={`${publicRuntimeConfig.BACKEND_URL || ""}${attributes?.image?.data.attributes.url}`}
               width={attributes.image.data.attributes.width}
@@ -23,7 +23,7 @@ export default function Cover2({ content }) {
             />
           </div>
           <div className="px-4 pt-10 pb-20 lg:py-40">
-            {/* <Preheading attributes={attributes.preheading}></Preheading> */}
+            
             <h1>{attributes.title}</h1>
             <p className="mb-12 text-lg">{attributes.blurb}</p>
             {attributes.buttonLinks &&
