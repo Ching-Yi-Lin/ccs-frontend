@@ -35,7 +35,7 @@ export default function ProfileCards1({ content }) {
               className="flex flex-col w-64 items-center justify-center"
               key={i}
             >
-              <div className="relative h-32 w-32 transition-opacity rounded-full hover:opacity-80">
+              <div className="relative h-32 w-32 transition-opacity rounded-full">
                 <Image
                   className="rounded-full"
                   src={`${publicRuntimeConfig.BACKEND_URL || ""}${

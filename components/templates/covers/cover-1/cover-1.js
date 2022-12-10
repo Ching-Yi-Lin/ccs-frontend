@@ -25,6 +25,7 @@ export default function Cover1({ content }) {
           </div>
           <div className="bg-black px-4 pt-10 pb-20 lg:py-40">
             <h1 className="text-white">{attributes.title}</h1>
+            <h3 className="text-white">Nau Mai, Haere Mai. Welcome.</h3>
             <p className="mb-12 text-lg text-white ">{attributes.blurb}</p>
             {attributes.buttonLinks &&
               attributes.buttonLinks.map((button) => {
